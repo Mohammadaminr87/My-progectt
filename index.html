@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 20px;
+        }
+        
+        label{
+            font-size: 20px;color: maroon;
+        }
+        
+        
+    </style>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body bgcolor="green">
+    <h1 style="color: aqua;">محاسبه چهار عمل اصلی و باقی مانده</h1>
+    <label>عددی را وارد کنید</label>
+    <input type="text" id="txt1" placeholder="enter">
+    <br>
+    <br>
+    <label>عددی را وارد کنید</label>
+    <input type="text" id="txt2" placeholder="enter">
+    <br>
+    <br>
+    <label>حاصل :</label>
+    <input type="text" id="txt3" placeholder="=">
+    <br>
+    <br>
+    <button onclick="gam()" class="color-btn btn1">جمع</button>
+    <button onclick="taf()" class="color-btn btn2">تفریق</button>
+    <button onclick="zarb()" class="color-btn btn3">ضرب</button>
+    <button onclick="tagh()" class="color-btn btn4">تقسیم</button>
+    <button onclick="bagh()" class="color-btn btn5">باقی مانده</button>
+    
+</body>
+<script>
+    function gam(){
+        var a=Number(document.getElementById("txt1").value);
+        var b=Number(document.getElementById("txt2").value);
+        document.getElementById("txt3").value=a+b
+
+    }
+    function taf(){
+        var a=Number(document.getElementById("txt1").value);
+        var b=Number(document.getElementById("txt2").value);
+        document.getElementById("txt3").value=a-b
+    }
+    function zarb(){
+        var a=Number(document.getElementById("txt1").value);
+        var b=Number(document.getElementById("txt2").value);
+        document.getElementById("txt3").value=a*b
+    }
+    function tagh(){
+        var a=Number(document.getElementById("txt1").value);
+        var b=Number(document.getElementById("txt2").value);
+        document.getElementById("txt3").value=a/b
+    }
+    function bagh(){
+        var a=Number(document.getElementById("txt1").value);
+        var b=Number(document.getElementById("txt2").value);
+        document.getElementById("txt3").value=a%b
+    }
+
+
+</script>
+</html>
